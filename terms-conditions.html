@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Smart Klean Laundry Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+        
+        /* Animation for terms sections */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .term-section {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Delay animations for each section */
+        .term-section:nth-child(1) { animation-delay: 0.1s; }
+        .term-section:nth-child(2) { animation-delay: 0.2s; }
+        .term-section:nth-child(3) { animation-delay: 0.3s; }
+        .term-section:nth-child(4) { animation-delay: 0.4s; }
+        .term-section:nth-child(5) { animation-delay: 0.5s; }
+        .term-section:nth-child(6) { animation-delay: 0.6s; }
+        .term-section:nth-child(7) { animation-delay: 0.7s; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-tshirt text-3xl"></i>
+                    <h1 class="text-2xl md:text-3xl font-bold"><a href="./index.html">Smart Klean</a></h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="./index.html" class="hover:text-blue-200 transition">Home</a>
+                    <!-- <a href="#" class="hover:text-blue-200 transition">Services</a>
+                    <a href="#" class="hover:text-blue-200 transition">Pricing</a>
+                    <a href="#" class="hover:text-blue-200 transition">Contact</a> -->
+                </nav>
+                <button class="md:hidden text-2xl" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="hidden bg-blue-700 text-white py-4 px-4 md:hidden" id="mobile-menu">
+        <div class="flex flex-col space-y-3">
+            <a href="./index.html" class="hover:text-blue-200 transition">Home</a>
+            
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">Terms and Conditions</h2>
+                <p class="text-gray-600">Last updated: June 2023</p>
+                <div class="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Introduction -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Introduction
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Welcome to Smart Klean! These terms and conditions outline the rules and regulations for the use of our laundry services. By accessing or using our services, you accept these terms and conditions in full. If you disagree with any part of these terms, please do not use our services.
+                    </p>
+                </section>
+
+                <!-- Services -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-concierge-bell mr-2"></i> Services
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Smart Klean provides professional laundry services including but not limited to:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>Wash and fold services</li>
+                        <li>Dry cleaning</li>
+                        <li>Stain removal treatments</li>
+                        <li>Special fabric care</li>
+                        <li>Alterations and repairs (select locations)</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        Services may vary by location. We reserve the right to modify or discontinue any service without notice.
+                    </p>
+                </section>
+
+                <!-- Pricing and Payment -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-money-bill-wave mr-2"></i> Pricing and Payment
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        All prices are quoted in local currency and are subject to change without notice. Payment is due at the time of service unless you have an approved credit account with us. We accept cash, credit/debit cards, and mobile payments.
+                    </p>
+                </section>
+
+                <!-- Liability -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-2"></i> Liability
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        While we take utmost care in handling your garments, Smart Klean's liability for any lost, damaged, or stolen items is only limited to ten times the charge for cleaning that item. We are not responsible for:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>Damage due to normal wear and tear</li>
+                        <li>Pre-existing conditions or weaknesses in fabrics</li>
+                        <li>Damage to delicate items not disclosed at drop-off</li>
+                        <li>Color loss or shrinkage that may occur during proper cleaning</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        High-value items should be declared at the time of drop-off for special handling.
+                    </p>
+                </section>
+
+                <!-- Cancellation and Refunds -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-ban mr-2"></i> Cancellation and Refunds
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Orders can be cancelled within 1 hour of placement without penalty. After this period, a cancellation fee may apply. Refunds for unsatisfactory service will be evaluated on a case-by-case basis. To request a refund, please contact us within 24 hours of receiving your items.
+                    </p>
+                </section>
+
+                <!-- Storage and Unclaimed Items -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-box-open mr-2"></i> Storage and Unclaimed Items
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cleaned items will be stored for up to 30 days from the completion date. After this period, unclaimed items may be donated to charity or disposed of at our discretion. Storage fees may apply for items held beyond 7 days.
+                    </p>
+                </section>
+
+                <!-- Changes to Terms -->
+                <section class="term-section opacity-0">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i class="fas fa-edit mr-2"></i> Changes to Terms
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We reserve the right to modify these terms at any time. Your continued use of our services following any changes constitutes acceptance of the new terms. We will notify you of significant changes through email or notices on our website.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Acceptance -->
+            <div class="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-200">
+                <h3 class="text-xl font-semibold text-blue-700 mb-4">Acceptance of Terms</h3>
+                <p class="text-gray-700 mb-6">
+                    By using Smart Klean services, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 sm:mb-0">
+                        <input type="checkbox" id="accept-terms" class="mr-2 h-5 w-5 text-blue-600 rounded">
+                        <label for="accept-terms" class="text-gray-700">I agree to the terms and conditions</label>
+                    </div>
+                    <button id="continue-btn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Continue <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-tshirt mr-2"></i> Smart Klean
+                    </h3>
+                    <p class="text-gray-400">
+                        Professional laundry services with care and precision.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <!-- <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li> -->
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> No. 7, Durban Street, Wuse, Abuja</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> (+234) 913 0583 321</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> smartkleanservices@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2019 Smart Klean. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Terms acceptance toggle
+        const acceptCheckbox = document.getElementById('accept-terms');
+        const continueButton = document.getElementById('continue-btn');
+        
+        acceptCheckbox.addEventListener('change', () => {
+            continueButton.disabled = !acceptCheckbox.checked;
+        });
+
+        // Animate sections when they come into view
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.term-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Continue button action
+        continueButton.addEventListener('click', () => {
+            alert('Thank you for accepting our terms and conditions!');
+             // Continue button action
+            window.location.href = "./index.html";
+        
+        });
+    </script>
+</body>
+</html>

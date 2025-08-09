@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Klean - Premium Laundry Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-tshirt text-blue-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">Smart Klean</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#services"
+                        class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#pricing"
+                        class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Pricing</a>
+                    <a href="#about"
+                        class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#book"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">Book
+                        Now</a>
+                    <a href="#book"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition duration-300">Blog</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Home</a>
+                <a href="#services"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Services</a>
+                <a href="#pricing"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Pricing</a>
+                <a href="#about"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">About</a>
+                <a href="#contact"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+                <a href="#book"
+                    class="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700">Book
+                    Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white pt-32 pb-20 md:pt-40 md:pb-28 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 animate-fadeIn">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your Clothes Deserve The Best Care</h1>
+                    <p class="text-lg md:text-xl mb-8">Smart Klean offers premium laundry services with quick turnaround
+                        times and eco-friendly detergents. We handle your clothes with care so you can focus on what
+                        matters.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#book"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-medium text-center transition duration-300">Schedule
+                            a Pickup</a>
+                        <a href="#services"
+                            class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-md text-lg font-medium text-center transition duration-300">Our
+                            Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10 animate-fadeIn">
+                    <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-xl">
+                        <h3 class="text-xl font-semibold mb-4">Why Choose Smart Klean?</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                                <span>Same-day service available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                                <span>Eco-friendly detergents</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                                <span>Professional stain removal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                                <span>Free pickup and delivery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                                <span>100% satisfaction guarantee</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-blue-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold mb-2">10K+</div>
+                    <div class="text-sm md:text-base">Happy Customers</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-sm md:text-base">Customer Support</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold mb-2">99%</div>
+                    <div class="text-sm md:text-base">Satisfaction Rate</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold mb-2">1Hr</div>
+                    <div class="text-sm md:text-base">Express Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Premium Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer a comprehensive range of laundry services to
+                    meet all your needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-tshirt text-blue-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Wash & Fold</h3>
+                        <p class="text-gray-600 mb-4">Professional washing, drying, and folding of your everyday clothes
+                            with premium detergents.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>Sorted by color and fabric</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>Eco-friendly detergents</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>Neatly folded and packaged</span>
+                            </li>
+                        </ul>
+                        <a href="#book" class="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-water text-green-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Dry Cleaning</h3>
+                        <p class="text-gray-600 mb-4">Expert care for your delicate garments, suits, and special
+                            occasion wear.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Professional stain treatment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Gentle on delicate fabrics</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Pressed and ready to wear</span>
+                            </li>
+                        </ul>
+                        <a href="#book"
+                            class="text-green-600 font-medium hover:text-green-700 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-house text-purple-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Industrial Cleaning</h3>
+                        <p class="text-gray-600 mb-4">Specialized cleaning for your new building, or deep cleaning for your home</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Large-capacity machines</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Hypoallergenic options</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Fresh and sanitized</span>
+                            </li>
+                        </ul>
+                        <a href="#book"
+                            class="text-purple-600 font-medium hover:text-purple-700 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Getting your laundry done has never been easier</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Schedule a Pickup</h3>
+                    <p class="text-gray-600">Book online or through our app. Choose a pickup time that works for you.
+                    </p>
+                    <div class="mt-4">
+                        <i class="fas fa-mobile-alt text-blue-500 text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">We Do The Work</h3>
+                    <p class="text-gray-600">Our professionals clean your clothes with care using premium products.</p>
+                    <div class="mt-4">
+                        <i class="fas fa-tshirt text-blue-500 text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Delivery Back to You</h3>
+                    <p class="text-gray-600">Fresh, clean clothes delivered to your door at your convenience.</p>
+                    <div class="mt-4">
+                        <i class="fas fa-truck text-blue-500 text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">No hidden fees. Quality service at fair prices.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div
+                    class="pricing-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden transition duration-300 ease-in-out">
+                    <div class="px-6 py-8">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Basic Wash</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-bold text-gray-800">₦500</span>
+                            <span class="ml-1 text-gray-600">/ cloth</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Perfect for everyday laundry needs</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Selected and seperated by color</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Washed & folded</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>T-shirts, Button-up shirts, Sweatpants, Sportswears, Shorts etc</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>24-48 hour turnaround</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-gray-300 mr-3"></i>
+                                <span>No dry cleaning</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pt-4 pb-8 bg-gray-50">
+                        <a href="#book"
+                            class="block w-full py-2 px-4 border border-transparent rounded-md text-center font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                            Choose Plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular Plan -->
+                <div
+                    class="pricing-card bg-white border-2 border-blue-500 rounded-xl shadow-lg overflow-hidden transition duration-300 ease-in-out transform">
+                    <div class="px-6 py-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800 mb-2">Premium Care</h3>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-3xl font-bold text-gray-800">₦2,000</span>
+                                    <span class="ml-1 text-gray-600">/ cloth</span>
+                                </div>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Most
+                                Popular</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Complete laundry solution</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Sorted according to color and material</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Washed, dried & folded</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Jean trousers, Jackets, Track-suits, Towels, Crochet Cardigans etc</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>48-hour turnaround</span>
+                            </li>
+                             <li class="flex items-center">
+                                <i class="fas fa-times text-gray-300 mr-3"></i>
+                                <span>Same day delivery</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pt-4 pb-8 bg-gray-50">
+                        <a href="#book"
+                            class="block w-full py-2 px-4 border border-transparent rounded-md text-center font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                            Choose Plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Deluxe Plan -->
+                <div
+                    class="pricing-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden transition duration-300 ease-in-out">
+                    <div class="px-6 py-8">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Family Bundle</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-bold text-gray-800">₦95,000</span>
+                            <span class="ml-1 text-gray-600">/ month</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Best value for families</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Up to 4 bags per week</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Unlimited wash & fold</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>10 dry clean items included</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Specialized delivery dates</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Free monthly bedding wash</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pt-4 pb-8 bg-gray-50">
+                        <a href="#book"
+                            class="block w-full py-2 px-4 border border-transparent rounded-md text-center font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                            Choose Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-blue-50 rounded-lg p-6">
+                <div class="md:flex items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Need something special?</h3>
+                        <p class="text-gray-600">We offer custom solutions for delicate fabrics, large items, and
+                            special requests.</p>
+                    </div>
+                    <div class="md:w-1/3 text-right">
+                        <a href="#contact"
+                            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 transition duration-300">
+                            Contact Us <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Don't just take our word for it - hear from our
+                    satisfied customers</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Smart Klean has been a lifesaver for my busy family. The clothes
+                        always come back perfectly clean and neatly folded. The pickup and delivery service is so
+                        convenient!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Toheeb Olatunji</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As someone who wears suits daily, I'm very particular about my dry
+                        cleaning. Smart Klean consistently does an excellent job - my clothes look better than when I
+                        bought them!"</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">David Osas</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The bedding service is amazing! My king-size comforter comes back
+                        looking and smelling fresh. It's so much easier than trying to wash it at home."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2019, Smart Klean started as a small neighborhood laundry
+                        service with a simple mission: to provide exceptional laundry care with convenience and
+                        reliability.</p>
+                    <p class="text-gray-600 mb-4">What began as a single location has grown into a trusted name in
+                        laundry services across the city, thanks to our commitment to quality and customer satisfaction.
+                    </p>
+                    <p class="text-gray-600 mb-6">We're proud to use eco-friendly detergents and energy-efficient
+                        equipment, reducing our environmental impact while delivering outstanding results.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-blue-100 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-2xl font-bold mb-1">20+</div>
+                            <div class="text-sm text-gray-600">Employees</div>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-2xl font-bold mb-1">3</div>
+                            <div class="text-sm text-gray-600">Locations</div>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-2xl font-bold mb-1">100%</div>
+                            <div class="text-sm text-gray-600">Locally Owned</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Smart Klean team" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Now Section -->
+    <section id="book" class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience Smart Klean?</h2>
+                    <p class="text-lg mb-6">Schedule your first pickup today and get 20% off your first order!</p>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-phone-alt mr-4 text-2xl"></i>
+                        <div>
+                            <div class="text-sm text-blue-200">Call us anytime</div>
+                            <div class="text-xl font-semibold">(+234) 913 0583 321
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock mr-4 text-2xl"></i>
+                        <div>
+                            <div class="text-sm text-blue-200">Business hours</div>
+                            <div class="font-medium">Mon-Fri: 7am-9pm</div>
+                            <div class="font-medium">Sat-Sun: 8am-10pm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-lg shadow-xl p-6 text-gray-800">
+                        <h3 class="text-xl font-semibold mb-6 text-center">Book a Pickup</h3>
+                        <form
+                            action="https://script.google.com/macros/s/AKfycbyASUzLpcs3kI8V81tfmui-E7uP1TOtumAon73a7DUP4RFrYOpTle0UdddXZInqwtkG/exec"
+                            id="pickup-form" method="POST">
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="name">Full Name</label>
+                                <input
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    id="name" name="customer_name" type="text" placeholder="John Doe" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="email">Email</label>
+                                <input
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="customer_email" id="customer_email" type="email"
+                                    placeholder="john@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="address">Residential
+                                    Address/Pickup & Delivery Address</label>
+                                <input
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="customer_address" id="residence" type="text" placeholder="" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="description">Items
+                                    Description</label>
+                                <textarea
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="items_description" id="description" type="text"
+                                    placeholder="Please describe items in detail" required> </textarea>
+                                <small class="text-green-700">*Pease ensure to give detailed description of your items
+                                    and quantity. Separate multiple items with comma (,)</small>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="phone">Phone
+                                    Number</label>
+                                <input
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="phone_number" id="phone" type="tel" placeholder="+(234) 912 3456 789"
+                                    required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="service">Service
+                                    Type</label>
+                                <select
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="service_type" id="service" required>
+                                    <option value="" selected disabled>Please select a service type</option>
+                                    <option value="Wash only">Wash Only</option>
+                                    <option value="Wash and fold">Wash & Fold</option>
+                                    <option value="Ironing only">Ironing Only</option>
+                                    <option value="Dry cleaning">Dry Cleaning</option>
+                                    <option value="Mixed (Wash, Fold, Iron, Dry clean)">Mixed (Wash, Fold, Iron, Dry clean)</option>
+                                    <option value="Beddings and linens">Bedding & Linens</option>
+                                    <option value="Industrial cleaning">Industrial Cleaning</option>
+                                </select>
+
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="date">Pickup
+                                    Date</label>
+                                <input
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="pickup_date" id="date" type="datetime-local" required>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="date">Expected Delivery
+                                    Date</label>
+                                <input
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    name="expected_delivery_date" id="date" type="datetime-local" required>
+                            </div>
+                            <!-- <a href="https://forms.gle/ADFmRwCBUnsXQYCQ7"> -->
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                                Schedule Pickup
+                            </button>
+                            <!-- </a> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50" id="faq">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Find answers to common questions about our services
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center text-left bg-white p-4 rounded-lg shadow-md hover:bg-gray-50 transition duration-300">
+                        <span class="font-medium text-gray-800">What areas do you serve?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-600">We currently serve the entire metro area including downtown and all
+                            surrounding neighborhoods. During the booking process, simply enter your address to confirm
+                            we service your location.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center text-left bg-white p-4 rounded-lg shadow-md hover:bg-gray-50 transition duration-300">
+                        <span class="font-medium text-gray-800">How do I prepare my laundry for pickup?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-600 mb-2">Simply place your clothes in any bag (we'll return them in our
+                            reusable Smart Klean bag). There's no need to sort - we'll handle that for you. Please:</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                            <li>Empty all pockets</li>
+                            <li>Remove any non-laundry items</li>
+                            <li>Note any special stains or instructions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center text-left bg-white p-4 rounded-lg shadow-md hover:bg-gray-50 transition duration-300">
+                        <span class="font-medium text-gray-800">What detergents do you use?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-600">We use premium, eco-friendly detergents that are tough on stains but
+                            gentle on fabrics and the environment. All our detergents are hypoallergenic and free from
+                            harsh chemicals. If you have specific detergent preferences or allergies, please let us know
+                            in the special instructions when booking.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="mb-6">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center text-left bg-white p-4 rounded-lg shadow-md hover:bg-gray-50 transition duration-300">
+                        <span class="font-medium text-gray-800">What if I'm not home for pickup or delivery?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-600">No problem! You can specify a safe place for us to leave or pick up
+                            your laundry (porch, doorman, etc.). For security, we recommend open and clear instructions from our customers so we can deliver to precise location and to the right person.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="mb-6">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center text-left bg-white p-4 rounded-lg shadow-md hover:bg-gray-50 transition duration-300">
+                        <span class="font-medium text-gray-800">What's your satisfaction guarantee?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-600">We stand behind our work 100%. If you're not completely satisfied with
+                            any aspect of our service, let us know within 24 hours and we'll either re-clean the items
+                            for free. <a href="./terms-conditions.html">Terms and Conditions apply</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Have questions or special requests? We'd love to hear
+                    from you.</p>
+            </div>
+
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-100 rounded-xl p-6 h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Our Location</h4>
+                                    <p class="text-gray-600">No. 7, Durban Street, Wuse, Abuja</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <a href="">
+                                        <i class="fas fa-phone-alt text-blue-600"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Phone Number</h4>
+                                    <p class="text-gray-600">(+234) 913 0583 321</p>
+                                    <p class="text-sm text-gray-500">Mon-Fri: 7am-9pm, Sat-Sun: 8am-10pm</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <a href="">
+                                        <i class="fas fa-brands fa-whatsapp text-blue-600"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">WhatsApp</h4>
+                                    <p class="text-gray-600">(+234) 913 0583 321</p>
+                                    <p class="text-sm text-gray-500">Mon-Fri: 7am-9pm, Sat-Sun: 8am-10pm</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <a href="">
+                                        <i class="fas fa-envelope text-blue-600"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Email Address</h4>
+                                    <p class="text-gray-600">smartkleansservices@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-200 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-200 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-200 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <form class="bg-green-100 rounded-xl p-6" action="https://api.web3forms.com/submit" method="post">
+
+                        <input type="hidden" name="access_key" value="6c716a55-d2e5-4d7b-9c9b-0b2d088b10e8">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="contact-name">Full
+                                Name</label>
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="contact_name" type="text" placeholder="John Doe" name="customer_name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2"
+                                for="contact-email">Email</label>
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="contact_email" type="email" placeholder="john@example.com" name="customer_email"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2" for="contact-email">Mobile
+                                Number</label>
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="contact_email" type="number" placeholder="eg. 08123456789"
+                                name="customer_mobile_number" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2"
+                                for="contact-subject">Subject</label>
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="contact-subject" type="text" placeholder="How can we help?" name="subject" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-medium mb-2"
+                                for="contact-message">Message</label>
+                            <textarea
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="contact-message" rows="5" placeholder="Your message here..." name="customer_message"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tshirt text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-white">Smart Klean</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Premium laundry services with convenience and care.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Wash & Fold</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Dry Cleaning</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Bedding &
+                                Linens</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Stain Removal</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Alterations</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a>
+                        </li>
+                        <!-- <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li> -->
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <!-- <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Press</a></li> -->
+                        <li><a href="#contact"
+                                class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition duration-300">FAQs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Help Center</a>
+                        </li>
+                        <li><a href="./terms-conditions.html" class="text-gray-400 hover:text-white transition duration-300">Terms of
+                                Service</a></li>
+                        <!-- <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy
+                                Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shipping
+                                Policy</a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2019 Smart Klean. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <!-- <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy
+                        Policy</a> -->
+                    <!-- <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of
+                        Service</a> -->
+                    <!-- <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Cookie Policy</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Return to homepage after submitting pickup form
+        const pickupForm = document.getElementById('pickup-form');
+        pickupForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            window.location.href = '/';
+        });
+
+
+
+    </script>
+</body>
+
+</html>
